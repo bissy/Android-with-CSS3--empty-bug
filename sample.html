@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <meta charset="UTF-8">
 <title>:empty bug? with Android</title>
-
-.empty:empty{
-display:none;
+<style>
+body div ,body section{
+background:#ddd;
+border:1px solid #444;
+margin:20px;
 }
-
+div:empty{
+height:20px;
+background:#ff0000;
+}
+</style>
 </head>
 <body>
 <h1>:empty bug? with Android</h1>
-<section class="empty">
-	<p>Hawaii</p>
-</section>
-<div class="empty">
-	<p>Hawaii</p>
+<h2>not empty div</h2>
+<div><p>1 Hawaii</p></div>
+
+<h2>not empty div , write tag in single line.</h2>
+<div>
+<p>2 Hawaii</p>
 </div>
+
+<h2>empty div , write tag in single line.</h2>
+<div></div>
+
+<h2>empty div , write tag two line.</h2>
+<div>
+</div>
+<h2>not empty section , write tag in single line.</h2>
+<section><p>Hawaii</p></section>
 </body>
 </html>
